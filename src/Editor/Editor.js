@@ -3,8 +3,9 @@ import './Editor.css'
 
 function Editor() {
     return (
-        <div>
-           this is the editor 
+        <div className="editor">
+           <label htmlFor="editor">Editor</label>
+           <textarea></textarea>
         </div>
     )
 }

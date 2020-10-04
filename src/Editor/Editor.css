@@ -1,0 +1,26 @@
+.editor {
+    height: 35vh;
+    margin: 4vh;
+    margin-top: 1vh;
+    width: 400px;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+}
+
+.editor label {
+    background-color: #203b46;
+    padding: 8px;
+    font-weight: bold;
+}
+
+.editor textarea {
+    height: 80%;
+    font-size: 16px;
+    padding:  5px 10px;
+
+}
+
+.editor textarea:focus {
+    outline: none;
+}

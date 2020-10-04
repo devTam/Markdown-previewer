@@ -1,0 +1,9 @@
+.App {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #13242a;
+    color: #fff;
+    height: 100vh;
+}
