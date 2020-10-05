@@ -1,15 +1,21 @@
 import React from 'react';
 import './App.css';
 import Editor from './Editor/Editor'
-import Previewer from './Previewer/Previewer'
+import Previewer from './Preview/Preview'
+import store from './redux/store'
+import { Provider } from 'react-redux';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Markdown Previewer</h1>
-      <Editor />
-      <Previewer />
-    </div>
+    <Provider store={store}>
+      <div className="App">
+        <h1>Markdown Previewer</h1>
+        <div className="App__layout">
+        <Editor />
+        <Previewer />
+        </div>
+      </div>
+    </Provider>
   );
 }
 

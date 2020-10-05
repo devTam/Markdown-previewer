@@ -5,7 +5,7 @@ function Editor() {
     return (
         <div className="editor">
            <label htmlFor="editor">Editor</label>
-           <textarea></textarea>
+           <textarea id="editor"></textarea>
         </div>
     )
 }

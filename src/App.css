@@ -1,9 +1,23 @@
 .App {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     background-color: #13242a;
     color: #fff;
     height: 100vh;
+}
+
+.App h1 {
+    text-align: center;
+}
+
+.App__layout {
+    display: flex;
+}
+
+@media (max-width: 560px) {
+    .App__layout {
+        display: block;
+    }
+
+    .App h1 {
+        font-size: 25px;
+    }
 }
