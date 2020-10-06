@@ -11,7 +11,7 @@
     flex-direction: column;
 }
 
-.preview h3 {
+.preview__heading {
     font-size: 16px;
     font-weight: bold;
     color: #fff;
@@ -22,6 +22,8 @@
 
 .preview__content {
     padding: 5px 10px;
+    text-align: left;
+    overflow-y: auto;
 }
 
 @media (max-width: 560px) {

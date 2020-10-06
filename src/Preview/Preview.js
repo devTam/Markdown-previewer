@@ -1,15 +1,26 @@
 import React from 'react'
 import './Preview.css';
+import { connect } from 'react-redux'
+import marked from 'marked';
 
-function Preview() {
+function Preview(props) {
+    marked.setOptions({
+        breaks: true
+      });
+    const markdown = marked(props.text)
     return (
         <div className="preview">
-            <h3>Preview</h3>
-            <div className="preview__content" id="preview">
-        this is the preview
-            </div>
+            <h3 className="preview__heading">Preview</h3>
+            <div className="preview__content" id="preview" dangerouslySetInnerHTML={{__html: markdown}} />
         </div>
     )
 }
 
-export default Preview
+const mapStateToProps = state => {
+    return {
+        text: state.text
+    }
+}
+
+export default connect(mapStateToProps, null)(Preview)
+

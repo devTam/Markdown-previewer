@@ -1,9 +1,8 @@
 import CONVERT_MARKDOWN from './MarkdownType';
-import marked from 'marked';
+
 
 const initial_state = {
-    text: 'Hello bae',
-    markdown: ''
+    text: ''
 }
 
 const MarkdownReducer = (state = initial_state, action) => {
@@ -11,7 +10,8 @@ const MarkdownReducer = (state = initial_state, action) => {
         case CONVERT_MARKDOWN:
             return {
                 ...state,
-                markdown: marked(state.text)
+                text: action.payload
+                
             }
         
         default: return state
