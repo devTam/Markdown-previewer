@@ -4,7 +4,7 @@
     height: 100vh;
 }
 
-.App h1 {
+.App__heading {
     text-align: center;
 }
 
@@ -17,7 +17,7 @@
         display: block;
     }
 
-    .App h1 {
+    .App__heading {
         font-size: 25px;
     }
 }

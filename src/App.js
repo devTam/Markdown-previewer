@@ -9,7 +9,7 @@ function App() {
   return (
     <Provider store={store}>
       <div className="App">
-        <h1>Markdown Previewer</h1>
+        <h1 className="App__heading">Markdown Previewer</h1>
         <div className="App__layout">
         <Editor />
         <Previewer />
