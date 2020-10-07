@@ -1,11 +1,10 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './Editor.css'
 import { connect } from 'react-redux'
 import MarkdownAction from '../redux/Markdown/MarkdownAction'
 
 
 function Editor(props) {
-    props.convertMarkdown(props.text)
     return (
         <div className="editor">
            <label htmlFor="editor">Editor</label>
@@ -17,15 +16,15 @@ function Editor(props) {
     )
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
     return {
         text: state.text
     }
 }
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
     return {
-        convertMarkdown: (unmarked) => dispatch(MarkdownAction(unmarked))
+        convertMarkdown: unmarked => dispatch(MarkdownAction(unmarked))
     }
 }
 
